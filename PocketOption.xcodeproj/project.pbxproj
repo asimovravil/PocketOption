@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F1285D062B14775D00CCDCB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D052B14775D00CCDCB9 /* AppDelegate.swift */; };
 		F1285D082B14775D00CCDCB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D072B14775D00CCDCB9 /* SceneDelegate.swift */; };
-		F1285D0A2B14775D00CCDCB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D092B14775D00CCDCB9 /* ViewController.swift */; };
 		F1285D0F2B14775E00CCDCB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1285D0E2B14775E00CCDCB9 /* Assets.xcassets */; };
 		F1285D122B14775E00CCDCB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1285D102B14775E00CCDCB9 /* LaunchScreen.storyboard */; };
 		F1285D292B147A3000CCDCB9 /* NunitoSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1285D1A2B147A3000CCDCB9 /* NunitoSans-LightItalic.ttf */; };
@@ -27,13 +26,14 @@
 		F1285D352B147A3000CCDCB9 /* NunitoSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1285D262B147A3000CCDCB9 /* NunitoSans-Black.ttf */; };
 		F1285D362B147A3000CCDCB9 /* NunitoSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1285D272B147A3000CCDCB9 /* NunitoSans-ExtraBoldItalic.ttf */; };
 		F1285D372B147A3000CCDCB9 /* NunitoSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1285D282B147A3000CCDCB9 /* NunitoSans-ExtraLightItalic.ttf */; };
+		F1285D392B147ABE00CCDCB9 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D382B147ABE00CCDCB9 /* FAQViewController.swift */; };
+		F1285D3B2B147ACB00CCDCB9 /* FAQList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D3A2B147ACB00CCDCB9 /* FAQList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F1285D022B14775D00CCDCB9 /* PocketOption.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketOption.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1285D052B14775D00CCDCB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1285D072B14775D00CCDCB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F1285D092B14775D00CCDCB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F1285D0E2B14775E00CCDCB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1285D112B14775E00CCDCB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1285D132B14775E00CCDCB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +52,8 @@
 		F1285D262B147A3000CCDCB9 /* NunitoSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Black.ttf"; sourceTree = "<group>"; };
 		F1285D272B147A3000CCDCB9 /* NunitoSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		F1285D282B147A3000CCDCB9 /* NunitoSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		F1285D382B147ABE00CCDCB9 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		F1285D3A2B147ACB00CCDCB9 /* FAQList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +89,11 @@
 				F1285D192B147A3000CCDCB9 /* nunitosans */,
 				F1285D052B14775D00CCDCB9 /* AppDelegate.swift */,
 				F1285D072B14775D00CCDCB9 /* SceneDelegate.swift */,
-				F1285D092B14775D00CCDCB9 /* ViewController.swift */,
 				F1285D0E2B14775E00CCDCB9 /* Assets.xcassets */,
 				F1285D102B14775E00CCDCB9 /* LaunchScreen.storyboard */,
 				F1285D132B14775E00CCDCB9 /* Info.plist */,
+				F1285D382B147ABE00CCDCB9 /* FAQViewController.swift */,
+				F1285D3A2B147ACB00CCDCB9 /* FAQList.swift */,
 			);
 			path = PocketOption;
 			sourceTree = "<group>";
@@ -202,7 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1285D0A2B14775D00CCDCB9 /* ViewController.swift in Sources */,
+				F1285D392B147ABE00CCDCB9 /* FAQViewController.swift in Sources */,
+				F1285D3B2B147ACB00CCDCB9 /* FAQList.swift in Sources */,
 				F1285D062B14775D00CCDCB9 /* AppDelegate.swift in Sources */,
 				F1285D082B14775D00CCDCB9 /* SceneDelegate.swift in Sources */,
 			);
@@ -360,7 +364,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketOption;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketOptionFAQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -387,7 +391,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketOption;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketOptionFAQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
