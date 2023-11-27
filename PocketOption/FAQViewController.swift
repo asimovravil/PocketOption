@@ -16,6 +16,7 @@ class FAQViewController: UIViewController {
     let sectionSubTitle = UILabel()
     let sectionPage = UIPageControl()
     let sectionNext = UIButton()
+    let sectionSkip = UIButton()
     
     func updateContentForPage(_ page: Int) {
         let sectionData = sectionFAQ[page]
@@ -35,10 +36,29 @@ class FAQViewController: UIViewController {
         sectionPage.currentPage = sectionPageList
     }
     
+    private func setupNavigationBar() {
+        let sectionSkipBarButton = UIBarButtonItem(customView: sectionSkip)
+        navigationItem.rightBarButtonItem = sectionSkipBarButton
+        sectionSkip.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
+    }
+
+    @objc private func skipButtonTapped() {
+        let controller = TestViewController()
+        controller.navigationItem.hidesBackButton = true
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: CGFloat(0x1D) / 255.0, green: CGFloat(0x1F) / 255.0, blue: CGFloat(0x2F) / 255.0, alpha: 1.0)
         updateContentForPage(sectionPageList)
+        setupNavigationBar()
+        
+        sectionSkip.setTitle("Skip", for: .normal)
+        sectionSkip.setTitleColor(.white, for: .normal)
+        sectionSkip.titleLabel?.alpha = 0.40
+        sectionSkip.titleLabel?.font = UIFont(name: "NunitoSans-Regular", size: 14)
+        view.addSubview(sectionSkip)
         
         sectionImage.layer.masksToBounds = true
         sectionImage.contentMode = .scaleAspectFit
@@ -62,7 +82,7 @@ class FAQViewController: UIViewController {
         
         sectionPage.numberOfPages = sectionFAQ.count
         sectionPage.currentPage = sectionPageList
-        sectionPage.currentPageIndicatorTintColor = .yellow
+        sectionPage.currentPageIndicatorTintColor = .blue
         sectionPage.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(sectionPage)
         
@@ -72,7 +92,7 @@ class FAQViewController: UIViewController {
         view.addSubview(sectionNext)
         
         NSLayoutConstraint.activate([
-            sectionImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 90),
+            sectionImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             sectionImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             sectionImage.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             
