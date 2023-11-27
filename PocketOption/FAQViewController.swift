@@ -29,7 +29,9 @@ class FAQViewController: UIViewController {
         if sectionPageList < sectionFAQ.count - 1 {
             sectionPageList += 1
         } else {
-            print("good")
+            let controller = TestViewController()
+            controller.navigationItem.hidesBackButton = true
+            self.navigationController?.pushViewController(controller, animated: true)
         }
         
         updateContentForPage(sectionPageList)
