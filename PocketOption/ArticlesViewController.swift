@@ -60,8 +60,17 @@ class ArticlesViewController: UIViewController {
         
         view.addSubview(mainCollectionView)
         
+        if UIScreen.main.bounds.size.height >= 812 {
+            NSLayoutConstraint.activate([
+                articlesLogo.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                articlesLogo.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
+            ])
+        }
+        
         NSLayoutConstraint.activate([
-            articlesLogo.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
             articlesLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             forYouToday.topAnchor.constraint(equalTo: articlesLogo.bottomAnchor, constant: 24),

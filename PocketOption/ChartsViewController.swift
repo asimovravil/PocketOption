@@ -58,8 +58,17 @@ class ChartsViewController: UIViewController {
         categoryScrollView.addSubview(categoryImage)
         view.addSubview(categoryScrollView)
         
+        if UIScreen.main.bounds.size.height >= 812 {
+            NSLayoutConstraint.activate([
+                chartsLogo.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                chartsLogo.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
+            ])
+        }
+        
         NSLayoutConstraint.activate([
-            chartsLogo.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
             chartsLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             categoryScrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),

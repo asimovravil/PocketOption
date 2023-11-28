@@ -53,8 +53,17 @@ class TestViewController: UIViewController {
         testSkip.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(testSkip)
         
+        if UIScreen.main.bounds.size.height >= 812 {
+            NSLayoutConstraint.activate([
+                testTitle.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                testTitle.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            ])
+        }
+        
         NSLayoutConstraint.activate([
-            testTitle.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
             testTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             testTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             

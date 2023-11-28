@@ -63,8 +63,17 @@ class NewsViewController: UIViewController {
         
         view.addSubview(mainCollectionView)
         
+        if UIScreen.main.bounds.size.height >= 812 {
+            NSLayoutConstraint.activate([
+                newsLogo.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                newsLogo.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
+            ])
+        }
+        
         NSLayoutConstraint.activate([
-            newsLogo.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
             newsLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             breakingLab.topAnchor.constraint(equalTo: newsLogo.bottomAnchor, constant: 24),

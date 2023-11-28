@@ -93,8 +93,18 @@ class FAQViewController: UIViewController {
         sectionNext.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(sectionNext)
         
+        if UIScreen.main.bounds.size.height >= 812 {
+            NSLayoutConstraint.activate([
+                sectionImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                sectionImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
+                sectionImage.heightAnchor.constraint(equalToConstant: 280),
+            ])
+        }
+        
         NSLayoutConstraint.activate([
-            sectionImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             sectionImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             sectionImage.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             

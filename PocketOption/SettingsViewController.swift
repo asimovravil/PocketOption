@@ -53,8 +53,17 @@ class SettingsViewController: UIViewController {
         acypBu.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(acypBu)
         
+        if UIScreen.main.bounds.size.height >= 812 {
+            NSLayoutConstraint.activate([
+                settingsImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                settingsImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
+            ])
+        }
+        
         NSLayoutConstraint.activate([
-            settingsImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
             settingsImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             notiBu.topAnchor.constraint(equalTo: settingsImage.bottomAnchor, constant: 24),
