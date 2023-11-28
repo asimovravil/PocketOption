@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class LatestCollectionViewCell: UICollectionViewCell {
     
@@ -23,6 +24,7 @@ class LatestCollectionViewCell: UICollectionViewCell {
         
         latestCard.image = UIImage(named: "latestNewsImage")
         latestCard.layer.masksToBounds = true
+        latestCard.layer.cornerRadius = 10
         latestCard.contentMode = .scaleAspectFill
         latestCard.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(latestCard)
@@ -48,6 +50,8 @@ class LatestCollectionViewCell: UICollectionViewCell {
             latestCard.topAnchor.constraint(equalTo: contentView.topAnchor),
             latestCard.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             latestCard.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            latestCard.heightAnchor.constraint(equalToConstant: 84),
+            latestCard.widthAnchor.constraint(equalToConstant: 84),
             
             latestLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             latestLabel.leadingAnchor.constraint(equalTo: latestCard.trailingAnchor, constant: 8),
@@ -60,5 +64,17 @@ class LatestCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configure(with article: Article) {
+        latestLabel.text = article.title
+        if let urlString = article.urlToImage, let url = URL(string: urlString) {
+            latestCard.sd_setImage(with: url, completed: nil)
+        } else {
+            latestCard.image = UIImage(named: "newest1")
+        }
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, yyyy HH:mm"
+        latestDate.text = formatter.string(from: article.publishedAt)
     }
 }

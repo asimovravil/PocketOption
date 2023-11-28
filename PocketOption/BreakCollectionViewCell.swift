@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BreakCollectionViewCell: UICollectionViewCell {
     
@@ -23,6 +24,7 @@ class BreakCollectionViewCell: UICollectionViewCell {
         
         newsCard.image = UIImage(named: "breakNewsImage")
         newsCard.layer.masksToBounds = true
+        newsCard.layer.cornerRadius = 10
         newsCard.contentMode = .scaleAspectFill
         newsCard.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(newsCard)
@@ -48,6 +50,8 @@ class BreakCollectionViewCell: UICollectionViewCell {
             newsCard.topAnchor.constraint(equalTo: contentView.topAnchor),
             newsCard.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             newsCard.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            newsCard.heightAnchor.constraint(equalToConstant: 130),
+            newsCard.widthAnchor.constraint(equalToConstant: 200),
             
             newsLabel.topAnchor.constraint(equalTo: newsCard.bottomAnchor, constant: 4),
             newsLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
@@ -62,5 +66,17 @@ class BreakCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configure(with article: Article) {
+        newsLabel.text = article.title
+        if let urlString = article.urlToImage, let url = URL(string: urlString) {
+            newsCard.sd_setImage(with: url, completed: nil)
+        } else {
+            newsCard.image = UIImage(named: "newest1")
+        }
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, yyyy HH:mm"
+        dateLabel.text = formatter.string(from: article.publishedAt)
     }
 }

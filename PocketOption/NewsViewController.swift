@@ -18,6 +18,7 @@ class NewsViewController: UIViewController {
     let newsLogo = UIImageView()
     let breakingLab = UILabel()
     let latestLab = UILabel()
+    var articles = [Article]()
     
     lazy var mainCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
@@ -33,6 +34,7 @@ class NewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fetchNews()
         navigationController?.setNavigationBarHidden(true, animated: false)
         view.backgroundColor = UIColor(red: CGFloat(0x1D) / 255.0, green: CGFloat(0x1F) / 255.0, blue: CGFloat(0x2F) / 255.0, alpha: 1.0)
         
@@ -76,6 +78,22 @@ class NewsViewController: UIViewController {
             mainCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
+    
+    private func fetchNews() {
+        NewsAPI().fetchArticles { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let fetchedArticles):
+                    self?.articles = fetchedArticles
+                    self?.mainCollectionView.reloadData()
+                case .failure(let error):
+                    // Handle the error (e.g., show an alert)
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
         return UICollectionViewCompositionalLayout { [weak self] sectionIndex, _ in
@@ -183,6 +201,12 @@ extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelega
             ) as? BreakCollectionViewCell else {
                 fatalError("Could not cast to BreakCollectionViewCell")
             }
+
+            if indexPath.row < articles.count {
+                let article = articles[indexPath.row]
+                cell.configure(with: article)
+            }
+            
             return cell
         case .lastedNews:
             guard let cell = collectionView.dequeueReusableCell(
@@ -191,6 +215,12 @@ extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelega
             ) as? LatestCollectionViewCell else {
                 fatalError("Could not cast to LatestCollectionViewCell")
             }
+            
+            if indexPath.row < articles.count {
+                let article = articles[indexPath.row]
+                cell.configure(with: article)
+            }
+            
             return cell
         }
     }
@@ -201,7 +231,7 @@ extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelega
         case .breakNews:
             return 2
         case .lastedNews:
-            return 2
+            return articles.count
         }
     }
 }
