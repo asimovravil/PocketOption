@@ -17,7 +17,7 @@ final class TabBarViewController: UITabBarController {
         
     private func addedTabBarSetup() {
         let chartsViewController = ChartsViewController()
-        let articlesViewController = UINavigationController(rootViewController: FAQViewController())
+        let articlesViewController = UINavigationController(rootViewController: ArticlesViewController())
         let newsViewController = UINavigationController(rootViewController: TestViewController())
         let settingViewController = UINavigationController(rootViewController: ResultViewController())
         
