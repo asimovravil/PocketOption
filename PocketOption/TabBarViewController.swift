@@ -21,7 +21,7 @@ final class TabBarViewController: UITabBarController {
         let newsViewController = UINavigationController(rootViewController: NewsViewController())
         let settingViewController = UINavigationController(rootViewController: SettingsViewController())
         
-        tabBar.backgroundColor = AppColor.tabbarBack.uiColor
+        tabBar.backgroundColor = Burger.tabbarBack.uiColor
         tabBar.tintColor = .white
         tabBar.unselectedItemTintColor = .gray
         tabBar.layer.cornerRadius = 20

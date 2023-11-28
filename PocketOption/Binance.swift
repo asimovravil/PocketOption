@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Question {
+struct Binance {
     let text: String
     
     let answers: [String]

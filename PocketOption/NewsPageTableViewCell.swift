@@ -31,7 +31,7 @@ final class NewsPageTableViewCell: UITableViewCell {
         contentView.addSubview(newsImageCell)
         
         newsCard.layer.cornerRadius = 30
-        newsCard.backgroundColor = AppColor.newsBack.uiColor
+        newsCard.backgroundColor = Burger.newsBack.uiColor
         newsCard.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(newsCard)
         

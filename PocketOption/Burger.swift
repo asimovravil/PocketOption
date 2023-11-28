@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-protocol AppColorProtocol {
+protocol BurgerColorHahaha {
     var rawValue: String { get }
 }
 
-extension AppColorProtocol {
+extension BurgerColorHahaha {
 
     var uiColor: UIColor {
         guard let color = UIColor.init(named: rawValue) else {
@@ -26,7 +26,7 @@ extension AppColorProtocol {
     }
 }
 
-enum AppColor: String, AppColorProtocol {
+enum Burger: String, BurgerColorHahaha {
     case quizColor
     case tabbarBack
     case newsBack

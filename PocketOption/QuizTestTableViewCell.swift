@@ -7,17 +7,17 @@
 
 import UIKit
 
-protocol QuizTableViewCellDelegate: AnyObject {
+protocol BurgerDelegateHahhahaah: AnyObject {
     func didAnswerQuestion(correctAnswers: Int)
 }
 
 final class QuizTestTableViewCell: UITableViewCell {
     
-    weak var delegate: QuizTableViewCellDelegate?
+    weak var delegate: BurgerDelegateHahhahaah?
     weak var quizViewController: QuizTestViewController?
     
     static let reuseID = String(describing: QuizTestTableViewCell.self)
-    var quizBrain = QuizBrain()
+    var quizBrain = TestBinance()
     private var answerSelected = false
     var userCorrectAnswers = 0
     weak var navigationController: UINavigationController?
@@ -48,7 +48,7 @@ final class QuizTestTableViewCell: UITableViewCell {
         firstAnswerButton.contentHorizontalAlignment = .center
         firstAnswerButton.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
         firstAnswerButton.layer.cornerRadius = 10
-        firstAnswerButton.backgroundColor = AppColor.quizColor.uiColor
+        firstAnswerButton.backgroundColor = Burger.quizColor.uiColor
         firstAnswerButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(firstAnswerButton)
         
@@ -58,7 +58,7 @@ final class QuizTestTableViewCell: UITableViewCell {
         secondAnswerButton.contentHorizontalAlignment = .center
         secondAnswerButton.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
         secondAnswerButton.layer.cornerRadius = 10
-        secondAnswerButton.backgroundColor = AppColor.quizColor.uiColor
+        secondAnswerButton.backgroundColor = Burger.quizColor.uiColor
         secondAnswerButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(secondAnswerButton)
         
@@ -68,7 +68,7 @@ final class QuizTestTableViewCell: UITableViewCell {
         thirdAnswerButton.contentHorizontalAlignment = .center
         thirdAnswerButton.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
         thirdAnswerButton.layer.cornerRadius = 10
-        thirdAnswerButton.backgroundColor = AppColor.quizColor.uiColor
+        thirdAnswerButton.backgroundColor = Burger.quizColor.uiColor
         thirdAnswerButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(thirdAnswerButton)
         
@@ -139,10 +139,10 @@ final class QuizTestTableViewCell: UITableViewCell {
             let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
             
             if userGotItRight {
-                sender.backgroundColor = AppColor.quizColor.uiColor
+                sender.backgroundColor = Burger.quizColor.uiColor
                 userCorrectAnswers += 1
             } else {
-                sender.backgroundColor = AppColor.quizColor.uiColor
+                sender.backgroundColor = Burger.quizColor.uiColor
             }
             
             sender.layer.cornerRadius = 10

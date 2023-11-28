@@ -57,7 +57,7 @@ final class QuizTestViewController: UIViewController {
     }
 }
 
-extension QuizTestViewController: UITableViewDataSource, UITableViewDelegate, QuizTableViewCellDelegate {
+extension QuizTestViewController: UITableViewDataSource, UITableViewDelegate, BurgerDelegateHahhahaah {
     func didAnswerQuestion(correctAnswers: Int) {
         tableView.reloadData()
 

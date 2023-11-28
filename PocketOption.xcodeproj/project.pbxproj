@@ -31,9 +31,9 @@
 		F1285D3F2B14855E00CCDCB9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D3E2B14855E00CCDCB9 /* TestViewController.swift */; };
 		F1285D432B1490A600CCDCB9 /* QuizTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D422B1490A600CCDCB9 /* QuizTestViewController.swift */; };
 		F1285D452B14911500CCDCB9 /* QuizTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D442B14911500CCDCB9 /* QuizTestTableViewCell.swift */; };
-		F1285D472B14914800CCDCB9 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D462B14914800CCDCB9 /* Question.swift */; };
-		F1285D492B14916600CCDCB9 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D482B14916600CCDCB9 /* QuizBrain.swift */; };
-		F1285D542B15AF2500CCDCB9 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D532B15AF2500CCDCB9 /* AppColor.swift */; };
+		F1285D472B14914800CCDCB9 /* Binance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D462B14914800CCDCB9 /* Binance.swift */; };
+		F1285D492B14916600CCDCB9 /* TestBinance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D482B14916600CCDCB9 /* TestBinance.swift */; };
+		F1285D542B15AF2500CCDCB9 /* Burger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D532B15AF2500CCDCB9 /* Burger.swift */; };
 		F1285D562B15B0CA00CCDCB9 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D552B15B0CA00CCDCB9 /* ResultViewController.swift */; };
 		F1285D582B15B4AD00CCDCB9 /* AgressiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D572B15B4AD00CCDCB9 /* AgressiveViewController.swift */; };
 		F1285D5A2B15D49900CCDCB9 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D592B15D49900CCDCB9 /* ChartsViewController.swift */; };
@@ -137,9 +137,9 @@
 		F1285D3E2B14855E00CCDCB9 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F1285D422B1490A600CCDCB9 /* QuizTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTestViewController.swift; sourceTree = "<group>"; };
 		F1285D442B14911500CCDCB9 /* QuizTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTestTableViewCell.swift; sourceTree = "<group>"; };
-		F1285D462B14914800CCDCB9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		F1285D482B14916600CCDCB9 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
-		F1285D532B15AF2500CCDCB9 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		F1285D462B14914800CCDCB9 /* Binance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binance.swift; sourceTree = "<group>"; };
+		F1285D482B14916600CCDCB9 /* TestBinance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBinance.swift; sourceTree = "<group>"; };
+		F1285D532B15AF2500CCDCB9 /* Burger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Burger.swift; sourceTree = "<group>"; };
 		F1285D552B15B0CA00CCDCB9 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		F1285D572B15B4AD00CCDCB9 /* AgressiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgressiveViewController.swift; sourceTree = "<group>"; };
 		F1285D592B15D49900CCDCB9 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
@@ -259,9 +259,9 @@
 				F1285D3E2B14855E00CCDCB9 /* TestViewController.swift */,
 				F1285D422B1490A600CCDCB9 /* QuizTestViewController.swift */,
 				F1285D442B14911500CCDCB9 /* QuizTestTableViewCell.swift */,
-				F1285D462B14914800CCDCB9 /* Question.swift */,
-				F1285D482B14916600CCDCB9 /* QuizBrain.swift */,
-				F1285D532B15AF2500CCDCB9 /* AppColor.swift */,
+				F1285D462B14914800CCDCB9 /* Binance.swift */,
+				F1285D482B14916600CCDCB9 /* TestBinance.swift */,
+				F1285D532B15AF2500CCDCB9 /* Burger.swift */,
 				F1285D552B15B0CA00CCDCB9 /* ResultViewController.swift */,
 				F1285D572B15B4AD00CCDCB9 /* AgressiveViewController.swift */,
 				F1285D592B15D49900CCDCB9 /* ChartsViewController.swift */,
@@ -462,10 +462,10 @@
 			files = (
 				F1285D5A2B15D49900CCDCB9 /* ChartsViewController.swift in Sources */,
 				F1285D582B15B4AD00CCDCB9 /* AgressiveViewController.swift in Sources */,
-				F1285D492B14916600CCDCB9 /* QuizBrain.swift in Sources */,
-				F1285D542B15AF2500CCDCB9 /* AppColor.swift in Sources */,
+				F1285D492B14916600CCDCB9 /* TestBinance.swift in Sources */,
+				F1285D542B15AF2500CCDCB9 /* Burger.swift in Sources */,
 				F1285D3F2B14855E00CCDCB9 /* TestViewController.swift in Sources */,
-				F1285D472B14914800CCDCB9 /* Question.swift in Sources */,
+				F1285D472B14914800CCDCB9 /* Binance.swift in Sources */,
 				F1285DAC2B1648D200CCDCB9 /* HamburgerSetup.swift in Sources */,
 				F1285D6E2B1625CE00CCDCB9 /* NewsModel.swift in Sources */,
 				F1285D642B1615F100CCDCB9 /* ForYouTodayCollectionViewCell.swift in Sources */,
