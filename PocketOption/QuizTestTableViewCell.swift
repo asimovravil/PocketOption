@@ -18,7 +18,6 @@ final class QuizTestTableViewCell: UITableViewCell {
     // MARK: - UI
     
     let questionLabel = UILabel()
-    let questionImage = UIImageView()
     let firstAnswerButton = UIButton()
     let secondAnswerButton = UIButton()
     let thirdAnswerButton = UIButton()
@@ -41,8 +40,8 @@ final class QuizTestTableViewCell: UITableViewCell {
         firstAnswerButton.titleLabel?.font = UIFont(name: "NunitoSans-Regular", size: 16)
         firstAnswerButton.contentHorizontalAlignment = .center
         firstAnswerButton.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
-        firstAnswerButton.layer.cornerRadius = 16
-        firstAnswerButton.backgroundColor = UIColor(red: CGFloat(0x02) / 255.0, green: CGFloat(0x01) / 255.0, blue: CGFloat(0x35) / 255.0, alpha: 1.0)
+        firstAnswerButton.layer.cornerRadius = 10
+        firstAnswerButton.backgroundColor = AppColor.quizColor.uiColor
         firstAnswerButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(firstAnswerButton)
         
@@ -51,8 +50,8 @@ final class QuizTestTableViewCell: UITableViewCell {
         secondAnswerButton.titleLabel?.font = UIFont(name: "NunitoSans-Regular", size: 16)
         secondAnswerButton.contentHorizontalAlignment = .center
         secondAnswerButton.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
-        secondAnswerButton.layer.cornerRadius = 16
-        secondAnswerButton.backgroundColor = UIColor(red: CGFloat(0x02) / 255.0, green: CGFloat(0x01) / 255.0, blue: CGFloat(0x35) / 255.0, alpha: 1.0)
+        secondAnswerButton.layer.cornerRadius = 10
+        secondAnswerButton.backgroundColor = AppColor.quizColor.uiColor
         secondAnswerButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(secondAnswerButton)
         
@@ -61,8 +60,8 @@ final class QuizTestTableViewCell: UITableViewCell {
         thirdAnswerButton.titleLabel?.font = UIFont(name: "NunitoSans-Regular", size: 16)
         thirdAnswerButton.contentHorizontalAlignment = .center
         thirdAnswerButton.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
-        thirdAnswerButton.layer.cornerRadius = 16
-        thirdAnswerButton.backgroundColor = UIColor(red: CGFloat(0x02) / 255.0, green: CGFloat(0x01) / 255.0, blue: CGFloat(0x35) / 255.0, alpha: 1.0)
+        thirdAnswerButton.layer.cornerRadius = 10
+        thirdAnswerButton.backgroundColor = AppColor.quizColor.uiColor
         thirdAnswerButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(thirdAnswerButton)
         
@@ -74,7 +73,7 @@ final class QuizTestTableViewCell: UITableViewCell {
         contentView.addSubview(countLabel)
         
         NSLayoutConstraint.activate([
-            countLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            countLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             countLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
             questionLabel.topAnchor.constraint(equalTo: countLabel.bottomAnchor, constant: 12),
@@ -91,7 +90,7 @@ final class QuizTestTableViewCell: UITableViewCell {
             secondAnswerButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             secondAnswerButton.heightAnchor.constraint(equalToConstant: 84),
             
-            thirdAnswerButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -50),
+            thirdAnswerButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             thirdAnswerButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             thirdAnswerButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             thirdAnswerButton.heightAnchor.constraint(equalToConstant: 84),
@@ -143,10 +142,10 @@ final class QuizTestTableViewCell: UITableViewCell {
             let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
 
             if userGotItRight {
-                sender.backgroundColor = UIColor(red: CGFloat(0x02) / 255.0, green: CGFloat(0x01) / 255.0, blue: CGFloat(0x35) / 255.0, alpha: 1.0)
+                sender.backgroundColor = AppColor.quizColor.uiColor
                 userCorrectAnswers += 1
             } else {
-                sender.backgroundColor = UIColor(red: CGFloat(0x02) / 255.0, green: CGFloat(0x01) / 255.0, blue: CGFloat(0x35) / 255.0, alpha: 1.0)
+                sender.backgroundColor = AppColor.quizColor.uiColor
             }
             
             sender.layer.cornerRadius = 10

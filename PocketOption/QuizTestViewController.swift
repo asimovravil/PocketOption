@@ -9,13 +9,21 @@ import UIKit
 
 final class QuizTestViewController: UIViewController {
     
+    let quizBack = UIImageView()
     let tableView = UITableView(frame: .zero, style: .plain)
 
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: false)
         view.backgroundColor = UIColor(red: CGFloat(0x1D) / 255.0, green: CGFloat(0x1F) / 255.0, blue: CGFloat(0x2F) / 255.0, alpha: 1.0)
+        
+        quizBack.image = UIImage(named: "quizImage")
+        quizBack.layer.masksToBounds = true
+        quizBack.contentMode = .scaleAspectFit
+        quizBack.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(quizBack)
         
         tableView.register(QuizTestTableViewCell.self, forCellReuseIdentifier: QuizTestTableViewCell.reuseID)
         tableView.layer.cornerRadius = 26
@@ -29,6 +37,11 @@ final class QuizTestViewController: UIViewController {
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
+            quizBack.topAnchor.constraint(equalTo: view.topAnchor),
+            quizBack.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            quizBack.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            quizBack.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),

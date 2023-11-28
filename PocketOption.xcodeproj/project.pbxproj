@@ -33,6 +33,7 @@
 		F1285D452B14911500CCDCB9 /* QuizTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D442B14911500CCDCB9 /* QuizTestTableViewCell.swift */; };
 		F1285D472B14914800CCDCB9 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D462B14914800CCDCB9 /* Question.swift */; };
 		F1285D492B14916600CCDCB9 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D482B14916600CCDCB9 /* QuizBrain.swift */; };
+		F1285D542B15AF2500CCDCB9 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D532B15AF2500CCDCB9 /* AppColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		F1285D442B14911500CCDCB9 /* QuizTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTestTableViewCell.swift; sourceTree = "<group>"; };
 		F1285D462B14914800CCDCB9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F1285D482B14916600CCDCB9 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
+		F1285D532B15AF2500CCDCB9 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				F1285D442B14911500CCDCB9 /* QuizTestTableViewCell.swift */,
 				F1285D462B14914800CCDCB9 /* Question.swift */,
 				F1285D482B14916600CCDCB9 /* QuizBrain.swift */,
+				F1285D532B15AF2500CCDCB9 /* AppColor.swift */,
 			);
 			path = PocketOption;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1285D492B14916600CCDCB9 /* QuizBrain.swift in Sources */,
+				F1285D542B15AF2500CCDCB9 /* AppColor.swift in Sources */,
 				F1285D3F2B14855E00CCDCB9 /* TestViewController.swift in Sources */,
 				F1285D472B14914800CCDCB9 /* Question.swift in Sources */,
 				F1285D392B147ABE00CCDCB9 /* FAQViewController.swift in Sources */,
