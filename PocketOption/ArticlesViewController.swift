@@ -127,7 +127,7 @@ class ArticlesViewController: UIViewController {
         let item = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1.0), // Занимает всю доступную ширину
-                heightDimension: .absolute(291)
+                heightDimension: .absolute(320)
             )
         )
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
@@ -136,7 +136,7 @@ class ArticlesViewController: UIViewController {
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1.0), // Группа также занимает всю доступную ширину
-                heightDimension: .absolute(291)
+                heightDimension: .absolute(320)
             ),
             subitem: item,
             count: 1 // Только один элемент в группе
@@ -147,9 +147,9 @@ class ArticlesViewController: UIViewController {
         section.interGroupSpacing = 0
         section.contentInsets = NSDirectionalEdgeInsets(
             top: 0,
-            leading: 16,
+            leading: 0,
             bottom: 0,
-            trailing: 16
+            trailing: 0
         )
         section.boundarySupplementaryItems = [supplementaryHeaderItem()]
         return section

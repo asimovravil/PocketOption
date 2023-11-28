@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "newsImageCell.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -29,4 +29,5 @@ extension AppColorProtocol {
 enum AppColor: String, AppColorProtocol {
     case quizColor
     case tabbarBack
+    case newsBack
 }

@@ -18,8 +18,9 @@ class NewsViewController: UIViewController {
     let newsLogo = UIImageView()
     let breakingLab = UILabel()
     let latestLab = UILabel()
-    var articles = [Article]()
-    
+    var articles: [Article] = []
+    var article: Article?
+
     lazy var mainCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         collectionView.dataSource = self
@@ -229,10 +230,19 @@ extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelega
         let section = sections[section]
         switch section {
         case .breakNews:
-            return 2
+            return articles.count
         case .lastedNews:
             return articles.count
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let article = articles[indexPath.row]
+        let newsPage = NewsPageViewController()
+        newsPage.article = article
+        newsPage.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(newsPage, animated: true)
     }
 }
 

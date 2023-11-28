@@ -18,7 +18,7 @@ final class TabBarViewController: UITabBarController {
     private func addedTabBarSetup() {
         let chartsViewController = ChartsViewController()
         let articlesViewController = UINavigationController(rootViewController: ArticlesViewController())
-        let newsViewController = UINavigationController(rootViewController: TestViewController())
+        let newsViewController = UINavigationController(rootViewController: NewsViewController())
         let settingViewController = UINavigationController(rootViewController: ResultViewController())
         
         tabBar.backgroundColor = AppColor.tabbarBack.uiColor
@@ -47,6 +47,5 @@ final class TabBarViewController: UITabBarController {
         )
         
         viewControllers = [chartsViewController, articlesViewController, newsViewController, settingViewController]
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Choose a theme", style: .plain, target: nil, action: nil)
     }
 }
