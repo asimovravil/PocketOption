@@ -39,6 +39,9 @@
 		F1285D5A2B15D49900CCDCB9 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D592B15D49900CCDCB9 /* ChartsViewController.swift */; };
 		F1285D5C2B15D83200CCDCB9 /* ChartsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D5B2B15D83200CCDCB9 /* ChartsCollectionViewCell.swift */; };
 		F1285D602B160A5500CCDCB9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D5F2B160A5500CCDCB9 /* TabBarViewController.swift */; };
+		F1285D622B16128100CCDCB9 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D612B16128100CCDCB9 /* ArticlesViewController.swift */; };
+		F1285D642B1615F100CCDCB9 /* ForYouTodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D632B1615F100CCDCB9 /* ForYouTodayCollectionViewCell.swift */; };
+		F1285D662B16186C00CCDCB9 /* NewestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D652B16186C00CCDCB9 /* NewestCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,9 @@
 		F1285D592B15D49900CCDCB9 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		F1285D5B2B15D83200CCDCB9 /* ChartsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F1285D5F2B160A5500CCDCB9 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F1285D612B16128100CCDCB9 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		F1285D632B1615F100CCDCB9 /* ForYouTodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouTodayCollectionViewCell.swift; sourceTree = "<group>"; };
+		F1285D652B16186C00CCDCB9 /* NewestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewestCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,9 @@
 				F1285D592B15D49900CCDCB9 /* ChartsViewController.swift */,
 				F1285D5B2B15D83200CCDCB9 /* ChartsCollectionViewCell.swift */,
 				F1285D5F2B160A5500CCDCB9 /* TabBarViewController.swift */,
+				F1285D612B16128100CCDCB9 /* ArticlesViewController.swift */,
+				F1285D632B1615F100CCDCB9 /* ForYouTodayCollectionViewCell.swift */,
+				F1285D652B16186C00CCDCB9 /* NewestCollectionViewCell.swift */,
 			);
 			path = PocketOption;
 			sourceTree = "<group>";
@@ -244,6 +253,7 @@
 				F1285D542B15AF2500CCDCB9 /* AppColor.swift in Sources */,
 				F1285D3F2B14855E00CCDCB9 /* TestViewController.swift in Sources */,
 				F1285D472B14914800CCDCB9 /* Question.swift in Sources */,
+				F1285D642B1615F100CCDCB9 /* ForYouTodayCollectionViewCell.swift in Sources */,
 				F1285D392B147ABE00CCDCB9 /* FAQViewController.swift in Sources */,
 				F1285D5C2B15D83200CCDCB9 /* ChartsCollectionViewCell.swift in Sources */,
 				F1285D3B2B147ACB00CCDCB9 /* FAQList.swift in Sources */,
@@ -251,7 +261,9 @@
 				F1285D452B14911500CCDCB9 /* QuizTestTableViewCell.swift in Sources */,
 				F1285D062B14775D00CCDCB9 /* AppDelegate.swift in Sources */,
 				F1285D082B14775D00CCDCB9 /* SceneDelegate.swift in Sources */,
+				F1285D622B16128100CCDCB9 /* ArticlesViewController.swift in Sources */,
 				F1285D602B160A5500CCDCB9 /* TabBarViewController.swift in Sources */,
+				F1285D662B16186C00CCDCB9 /* NewestCollectionViewCell.swift in Sources */,
 				F1285D562B15B0CA00CCDCB9 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

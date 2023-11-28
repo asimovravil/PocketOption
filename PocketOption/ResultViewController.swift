@@ -98,7 +98,7 @@ extension ResultViewController: CAAnimationDelegate {
     }
     
     func navigateToFAQViewController() {
-        let controller = AgressiveViewController()
+        let controller = TabBarViewController()
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
