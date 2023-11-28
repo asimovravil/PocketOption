@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol QuizTableViewCellDelegate: AnyObject {
+    func didAnswerQuestion(correctAnswers: Int)
+}
+
 final class QuizTestTableViewCell: UITableViewCell {
+    
+    weak var delegate: QuizTableViewCellDelegate?
+    weak var quizViewController: QuizTestViewController?
     
     static let reuseID = String(describing: QuizTestTableViewCell.self)
     var quizBrain = QuizBrain()
@@ -112,16 +119,6 @@ final class QuizTestTableViewCell: UITableViewCell {
         }
     }
     
-    @objc private func nextQuizButtonTapped() {
-        quizBrain.nextQuestion()
-        
-        if quizBrain.questionNumber == 0 {
-            showResultViewController()
-        } else {
-            updateUI()
-        }
-    }
-    
     @objc public func updateUI() {
         let questionText = quizBrain.getQuestionText()
         let answers = quizBrain.getAnswers()
@@ -140,7 +137,7 @@ final class QuizTestTableViewCell: UITableViewCell {
         if !answerSelected {
             let userAnswer = sender.currentTitle!
             let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
-
+            
             if userGotItRight {
                 sender.backgroundColor = AppColor.quizColor.uiColor
                 userCorrectAnswers += 1
@@ -153,14 +150,7 @@ final class QuizTestTableViewCell: UITableViewCell {
             quizBrain.nextQuestion()
             updateUI()
             answerSelected = false
-        }
-    }
-    
-    private func showResultViewController() {
-        if userCorrectAnswers == 4 {
-
-        } else {
-
+            delegate?.didAnswerQuestion(correctAnswers: self.userCorrectAnswers)
         }
     }
 }

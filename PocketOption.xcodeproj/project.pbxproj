@@ -34,6 +34,7 @@
 		F1285D472B14914800CCDCB9 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D462B14914800CCDCB9 /* Question.swift */; };
 		F1285D492B14916600CCDCB9 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D482B14916600CCDCB9 /* QuizBrain.swift */; };
 		F1285D542B15AF2500CCDCB9 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D532B15AF2500CCDCB9 /* AppColor.swift */; };
+		F1285D562B15B0CA00CCDCB9 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D552B15B0CA00CCDCB9 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		F1285D462B14914800CCDCB9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F1285D482B14916600CCDCB9 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 		F1285D532B15AF2500CCDCB9 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		F1285D552B15B0CA00CCDCB9 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +104,8 @@
 				F1285D052B14775D00CCDCB9 /* AppDelegate.swift */,
 				F1285D072B14775D00CCDCB9 /* SceneDelegate.swift */,
 				F1285D0E2B14775E00CCDCB9 /* Assets.xcassets */,
-				F1285D102B14775E00CCDCB9 /* LaunchScreen.storyboard */,
 				F1285D132B14775E00CCDCB9 /* Info.plist */,
+				F1285D102B14775E00CCDCB9 /* LaunchScreen.storyboard */,
 				F1285D382B147ABE00CCDCB9 /* FAQViewController.swift */,
 				F1285D3A2B147ACB00CCDCB9 /* FAQList.swift */,
 				F1285D3E2B14855E00CCDCB9 /* TestViewController.swift */,
@@ -112,6 +114,7 @@
 				F1285D462B14914800CCDCB9 /* Question.swift */,
 				F1285D482B14916600CCDCB9 /* QuizBrain.swift */,
 				F1285D532B15AF2500CCDCB9 /* AppColor.swift */,
+				F1285D552B15B0CA00CCDCB9 /* ResultViewController.swift */,
 			);
 			path = PocketOption;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				F1285D452B14911500CCDCB9 /* QuizTestTableViewCell.swift in Sources */,
 				F1285D062B14775D00CCDCB9 /* AppDelegate.swift in Sources */,
 				F1285D082B14775D00CCDCB9 /* SceneDelegate.swift in Sources */,
+				F1285D562B15B0CA00CCDCB9 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -43,6 +43,7 @@ class TestViewController: UIViewController {
         view.addSubview(testImage)
         
         testStart.setImage(UIImage(named: "herewego"), for: .normal)
+        testStart.addTarget(self, action: #selector(testStartClapped), for: .touchUpInside)
         testStart.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(testStart)
         
@@ -71,5 +72,11 @@ class TestViewController: UIViewController {
             testSkip.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
             testSkip.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
+    }
+    
+    @objc private func testStartClapped() {
+        let controller = QuizTestViewController()
+        controller.navigationItem.hidesBackButton = true
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

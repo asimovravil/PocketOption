@@ -9,6 +9,7 @@ import UIKit
 
 final class QuizTestViewController: UIViewController {
     
+    private var answeredQuestionsCount = 0
     let quizBack = UIImageView()
     let tableView = UITableView(frame: .zero, style: .plain)
 
@@ -48,9 +49,25 @@ final class QuizTestViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
+    
+    private func navigateToLeaderboard() {
+        let controller = ResultViewController()
+        controller.navigationItem.hidesBackButton = true
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
-extension QuizTestViewController: UITableViewDataSource, UITableViewDelegate {
+extension QuizTestViewController: UITableViewDataSource, UITableViewDelegate, QuizTableViewCellDelegate {
+    func didAnswerQuestion(correctAnswers: Int) {
+        tableView.reloadData()
+
+        answeredQuestionsCount += 1
+
+        if answeredQuestionsCount == 4 {
+            navigateToLeaderboard()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -62,6 +79,7 @@ extension QuizTestViewController: UITableViewDataSource, UITableViewDelegate {
         cell.navigationController = self.navigationController
         cell.selectionStyle = .none
         cell.backgroundColor = .clear
+        cell.delegate = self
         return cell
     }
     
