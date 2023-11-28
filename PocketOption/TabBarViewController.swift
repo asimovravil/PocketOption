@@ -19,7 +19,7 @@ final class TabBarViewController: UITabBarController {
         let chartsViewController = ChartsViewController()
         let articlesViewController = UINavigationController(rootViewController: ArticlesViewController())
         let newsViewController = UINavigationController(rootViewController: NewsViewController())
-        let settingViewController = UINavigationController(rootViewController: ResultViewController())
+        let settingViewController = UINavigationController(rootViewController: SettingsViewController())
         
         tabBar.backgroundColor = AppColor.tabbarBack.uiColor
         tabBar.tintColor = .white
