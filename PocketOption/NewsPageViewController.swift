@@ -10,8 +10,8 @@ import SDWebImage
 
 final class NewsPageViewController: UIViewController {
 
-    var articles: [Article] = []
-    var article: Article?
+    var articles: [newsBurger] = []
+    var article: newsBurger?
     
     // MARK: - UI
     

@@ -7,8 +7,8 @@
 
 import Foundation
 
-class NewsAPI {
-    func fetchArticles(completion: @escaping (Result<[Article], Error>) -> Void) {
+class serviceBurgerNews {
+    func fetchArticles(completion: @escaping (Result<[newsBurger], Error>) -> Void) {
         let urlString = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=1a253477eb7e4ba68a9e284d67ebc825"
         guard let url = URL(string: urlString) else {
             completion(.failure(NSError(domain: "Invalid URL", code: 400, userInfo: nil)))
@@ -29,7 +29,7 @@ class NewsAPI {
             do {
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
-                let articleResponse = try decoder.decode(ArticleResponse.self, from: data)
+                let articleResponse = try decoder.decode(responceBurger.self, from: data)
                 
                 completion(.success(articleResponse.articles))
             } catch {

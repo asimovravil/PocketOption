@@ -18,8 +18,8 @@ class NewsViewController: UIViewController {
     let newsLogo = UIImageView()
     let breakingLab = UILabel()
     let latestLab = UILabel()
-    var articles: [Article] = []
-    var article: Article?
+    var articles: [newsBurger] = []
+    var article: newsBurger?
 
     lazy var mainCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
@@ -90,7 +90,7 @@ class NewsViewController: UIViewController {
     }
     
     private func fetchNews() {
-        NewsAPI().fetchArticles { [weak self] result in
+        serviceBurgerNews().fetchArticles { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let fetchedArticles):

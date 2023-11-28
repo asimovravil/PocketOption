@@ -68,7 +68,7 @@ class BreakCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with article: Article) {
+    func configure(with article: newsBurger) {
         newsLabel.text = article.title
         if let urlString = article.urlToImage, let url = URL(string: urlString) {
             newsCard.sd_setImage(with: url, completed: nil)

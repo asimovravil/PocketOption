@@ -91,7 +91,7 @@ final class NewsPageTableViewCell: UITableViewCell {
     
     // MARK: - Actions
     
-    func configure(with article: Article) {
+    func configure(with article: newsBurger) {
         newsLabelCell.text = article.title
         if let urlString = article.urlToImage, let url = URL(string: urlString) {
             newsImageCell.sd_setImage(with: url, completed: nil)
