@@ -14,7 +14,8 @@ enum SectionType {
 class ChartsViewController: UIViewController {
 
     let sections: [SectionType] = [.main]
-    private var selectedLevel: Int?
+    let chartsLogo = UIImageView()
+    let categoryImage = UIImageView()
     
     // MARK: - UI
     
@@ -34,11 +35,30 @@ class ChartsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
         view.backgroundColor = UIColor(red: CGFloat(0x1D) / 255.0, green: CGFloat(0x1F) / 255.0, blue: CGFloat(0x2F) / 255.0, alpha: 1.0)
+        
+        chartsLogo.image = UIImage(named: "charts")
+        chartsLogo.layer.masksToBounds = true
+        chartsLogo.contentMode = .scaleAspectFit
+        chartsLogo.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(chartsLogo)
 
+        categoryImage.image = UIImage(named: "category")
+        categoryImage.layer.masksToBounds = true
+        categoryImage.contentMode = .scaleAspectFit
+        categoryImage.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(categoryImage)
         view.addSubview(mainCollectionView)
         NSLayoutConstraint.activate([
-            mainCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            chartsLogo.bottomAnchor.constraint(equalTo: categoryImage.topAnchor, constant: -24),
+            chartsLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            categoryImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 170),
+            categoryImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            mainCollectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 204),
             mainCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             mainCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             mainCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -78,7 +98,6 @@ class ChartsViewController: UIViewController {
             bottom: 10,
             trailing: 0
         )
-        itemSection.contentInsets.trailing = 24
         section.boundarySupplementaryItems = [supplementaryHeaderItem()]
         return section
     }
