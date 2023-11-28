@@ -38,6 +38,7 @@
 		F1285D582B15B4AD00CCDCB9 /* AgressiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D572B15B4AD00CCDCB9 /* AgressiveViewController.swift */; };
 		F1285D5A2B15D49900CCDCB9 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D592B15D49900CCDCB9 /* ChartsViewController.swift */; };
 		F1285D5C2B15D83200CCDCB9 /* ChartsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D5B2B15D83200CCDCB9 /* ChartsCollectionViewCell.swift */; };
+		F1285D602B160A5500CCDCB9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D5F2B160A5500CCDCB9 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		F1285D572B15B4AD00CCDCB9 /* AgressiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgressiveViewController.swift; sourceTree = "<group>"; };
 		F1285D592B15D49900CCDCB9 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		F1285D5B2B15D83200CCDCB9 /* ChartsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F1285D5F2B160A5500CCDCB9 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				F1285D572B15B4AD00CCDCB9 /* AgressiveViewController.swift */,
 				F1285D592B15D49900CCDCB9 /* ChartsViewController.swift */,
 				F1285D5B2B15D83200CCDCB9 /* ChartsCollectionViewCell.swift */,
+				F1285D5F2B160A5500CCDCB9 /* TabBarViewController.swift */,
 			);
 			path = PocketOption;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				F1285D452B14911500CCDCB9 /* QuizTestTableViewCell.swift in Sources */,
 				F1285D062B14775D00CCDCB9 /* AppDelegate.swift in Sources */,
 				F1285D082B14775D00CCDCB9 /* SceneDelegate.swift in Sources */,
+				F1285D602B160A5500CCDCB9 /* TabBarViewController.swift in Sources */,
 				F1285D562B15B0CA00CCDCB9 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
