@@ -12,10 +12,11 @@ enum SectionType {
 }
 
 class ChartsViewController: UIViewController {
-
+    
     let sections: [SectionType] = [.main]
     let chartsLogo = UIImageView()
     let categoryImage = UIImageView()
+    let categoryScrollView = UIScrollView()
     
     // MARK: - UI
     
@@ -44,25 +45,44 @@ class ChartsViewController: UIViewController {
         chartsLogo.contentMode = .scaleAspectFit
         chartsLogo.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(chartsLogo)
-
+        
         categoryImage.image = UIImage(named: "category")
         categoryImage.layer.masksToBounds = true
         categoryImage.contentMode = .scaleAspectFit
         categoryImage.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(categoryImage)
         view.addSubview(mainCollectionView)
+        
+        categoryScrollView.showsHorizontalScrollIndicator = false
+        categoryScrollView.translatesAutoresizingMaskIntoConstraints = false
+        categoryScrollView.addSubview(categoryImage)
+        view.addSubview(categoryScrollView)
+        
         NSLayoutConstraint.activate([
-            chartsLogo.bottomAnchor.constraint(equalTo: categoryImage.topAnchor, constant: -24),
+            chartsLogo.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
             chartsLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            categoryImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 170),
-            categoryImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            categoryScrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+            categoryScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            categoryScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            categoryScrollView.heightAnchor.constraint(equalToConstant: 100), // Установите желаемую высоту
+            
+            categoryImage.leadingAnchor.constraint(equalTo: categoryScrollView.leadingAnchor),
+            categoryImage.trailingAnchor.constraint(equalTo: categoryScrollView.trailingAnchor),
+            categoryImage.topAnchor.constraint(equalTo: categoryScrollView.topAnchor),
+            categoryImage.bottomAnchor.constraint(equalTo: categoryScrollView.bottomAnchor),
+            categoryImage.heightAnchor.constraint(equalTo: categoryScrollView.heightAnchor),
             
             mainCollectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 204),
             mainCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             mainCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             mainCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+        
+        if let image = categoryImage.image {
+            let width = image.size.width / image.size.height * 100 // 100 - это высота ScrollView
+            categoryScrollView.contentSize = CGSize(width: width, height: 100)
+        }
     }
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
@@ -74,7 +94,7 @@ class ChartsViewController: UIViewController {
             }
         }
     }
-        
+    
     func mainSectionLayout() -> NSCollectionLayoutSection {
         let itemSection = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
