@@ -35,6 +35,7 @@
 		F1285D492B14916600CCDCB9 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D482B14916600CCDCB9 /* QuizBrain.swift */; };
 		F1285D542B15AF2500CCDCB9 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D532B15AF2500CCDCB9 /* AppColor.swift */; };
 		F1285D562B15B0CA00CCDCB9 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D552B15B0CA00CCDCB9 /* ResultViewController.swift */; };
+		F1285D582B15B4AD00CCDCB9 /* AgressiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1285D572B15B4AD00CCDCB9 /* AgressiveViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		F1285D482B14916600CCDCB9 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 		F1285D532B15AF2500CCDCB9 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		F1285D552B15B0CA00CCDCB9 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		F1285D572B15B4AD00CCDCB9 /* AgressiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgressiveViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				F1285D482B14916600CCDCB9 /* QuizBrain.swift */,
 				F1285D532B15AF2500CCDCB9 /* AppColor.swift */,
 				F1285D552B15B0CA00CCDCB9 /* ResultViewController.swift */,
+				F1285D572B15B4AD00CCDCB9 /* AgressiveViewController.swift */,
 			);
 			path = PocketOption;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1285D582B15B4AD00CCDCB9 /* AgressiveViewController.swift in Sources */,
 				F1285D492B14916600CCDCB9 /* QuizBrain.swift in Sources */,
 				F1285D542B15AF2500CCDCB9 /* AppColor.swift in Sources */,
 				F1285D3F2B14855E00CCDCB9 /* TestViewController.swift in Sources */,
